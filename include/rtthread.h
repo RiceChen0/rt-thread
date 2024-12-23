@@ -284,7 +284,7 @@ rt_mp_t rt_mp_create(const char *name,
 rt_err_t rt_mp_delete(rt_mp_t mp);
 #endif /* RT_USING_HEAP */
 void *rt_mp_alloc(rt_mp_t mp, rt_int32_t time);
-void rt_mp_free(void *block);
+void rt_mp_free(rt_mp_t mp, void *block);
 #ifdef RT_USING_HOOK
 void rt_mp_alloc_sethook(void (*hook)(struct rt_mempool *mp, void *block));
 void rt_mp_free_sethook(void (*hook)(struct rt_mempool *mp, void *block));
